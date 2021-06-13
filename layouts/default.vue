@@ -1,5 +1,9 @@
 <template>
-  <div>
+  <div style="height: 100vh">
+    <b-navbar toggleable="lg" type="dark" variant="dark" :sticky="true">
+      <b-navbar-brand href="#">Climate Impact</b-navbar-brand>
+      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+    </b-navbar>
     <Nuxt />
   </div>
 </template>
