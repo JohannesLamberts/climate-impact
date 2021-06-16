@@ -1,15 +1,22 @@
 <template>
-  <div class="color-wrapper">
-    <div class="container">
-      <p class="question">Wusstest Du, dass...</p>
-      <p class="answer">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incidid unt ut labore et dolore magna aliqua?
-      </p>
-      <ul class="sources">
-        <li>www.ipcc.org</li>
-        <li>www.ipcc.org</li>
-      </ul>
+  <div>
+    <h1>
+      Wusstest Du,<span class="answer">
+        dass Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incidid unt ut labore et dolore magna aliqua?
+      </span>
+    </h1>
+    <p>Quellen</p>
+    <ul class="sources">
+      <li>
+        <a href="https://www.ipcc.ch/" target="_blank">www.ipcc.org</a>
+      </li>
+      <li>
+        <a href="https://www.ipcc.ch/" target="_blank">www.ipcc.org</a>
+      </li>
+    </ul>
+    <div style="text-align: right">
+      <b-button variant="primary" size="lg">Next</b-button>
     </div>
   </div>
 </template>
@@ -17,19 +24,27 @@
 <style lang="scss">
 @import '~/assets/styles/variables.scss';
 
-.color-wrapper {
-  background-image: linear-gradient(350deg, $green, $white);
-  height: 100%;
-  display: flex;
-}
-
-.container {
-  padding: 1rem;
-}
-
-.question,
 .answer {
-  font-size: 1.4rem;
+  color: $green;
+}
+
+h1 {
+  @include media-breakpoint-up(md) {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    font-size: 3.5rem;
+  }
+
+  font-size: 2rem;
   font-weight: bold;
+}
+
+ul {
+  font-size: 1.2rem;
+  padding-left: 0;
+  list-style: none;
+  li + li {
+    margin-top: 0.5rem;
+  }
 }
 </style>
