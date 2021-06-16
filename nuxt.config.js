@@ -39,7 +39,25 @@ export default {
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    // https://i18n.nuxtjs.org/
+    'nuxt-i18n',
   ],
+
+  i18n: {
+    locales: [
+      {
+        code: 'de',
+        file: 'de-DE.js',
+      },
+      {
+        code: 'en',
+        file: 'en-EN.js',
+      },
+    ],
+    lazy: true,
+    langDir: 'locales/',
+    defaultLocale: 'en',
+  },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},

@@ -1,10 +1,15 @@
 <template>
   <div>
+    <b-badge variant="ecological">Ecological</b-badge>
+    <b-badge variant="economical">Economical</b-badge>
     <h1>
-      Wusstest Du,<span class="answer">
-        dass Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incidid unt ut labore et dolore magna aliqua?
-      </span>
+      <i18n path="didYouKnow.questionPrefix" tag="span">
+        <span class="answer">
+          {{ $t('didYouKnow.questionColored') }}
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incidid unt ut labore et dolore magna aliqua?
+        </span>
+      </i18n>
     </h1>
     <p>Quellen</p>
     <ul class="sources">
@@ -20,6 +25,16 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  nuxtI18n: {
+    paths: {
+      de: '/wusstest-du-dass',
+    },
+  },
+}
+</script>
 
 <style lang="scss">
 @import '~/assets/styles/variables.scss';

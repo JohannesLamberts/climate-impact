@@ -24,6 +24,9 @@ $green: #02c21f !default;
 $teal: #20c997 !default;
 $cyan: #17a2b8 !default;
 
+$economical: $pink;
+$ecological: $green;
+
 // Theme color default definitions
 $primary: $purple !default;
 $secondary: $gray-600 !default;
@@ -48,6 +51,8 @@ $theme-colors: map-merge(
     'danger': $danger,
     'light': $light,
     'dark': $dark,
+    'ecological': $ecological,
+    'economical': $economical,
   ),
   $theme-colors
 );
